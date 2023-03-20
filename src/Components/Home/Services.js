@@ -1,14 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import imgConvert from "../../Assets/convert.png";
-import imgLearnSign from "../../Assets/learn-sign.jpg";
-import imgVideos from "../../Assets/videos.png";
-import MyCard from "../serviceData/Mycard";
+import MyCard from "../MyCard";
+import serviceData from "../serviceData/servicedata";
 
 
-function Services() {
+function Services(){
   return (
-    <section id="services"  style={{ marginTop:"-45px"}}>
+    <section id="services" style={{ marginTop: "-45px" }}>
       <div className="container">
         <div className="row mt-5">
           <div
@@ -27,80 +25,10 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className="card-deck">
-          <div className="row">
-            <div className="col-lg-4 mt-5">
-              <div className="card col-lg-12 h-100 d-flex flex-column justify-content-between card-background">
-                <img className="card-img-top" src={imgConvert} alt="Convert Clipart" />
-                <div className="card-body">
-                  <h5 className="card-title">Convert</h5>
-                  <p className="card-text">
-                    Want to convert audio or text into Indian Sign Language?
-                    Then, you are in the right place! Provide your audio by
-                    speaking into your mic or type the text that you want to
-                    convert into ISL and within a few clicks watch the magic
-                    happen!
-                  </p>
-                </div>
-                <div className="card-footer p-0 m-0" style={{ border: "none" }}>
-                  <Link
-                    to="/sanvaad/convert"
-                    className="btn btn-info w-100 p-3"
-                    style={{ fontSize: "large" }}
-                  >
-                    EXPLORE NOW!
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 mt-5">
-              <div className="card col-lg-12 h-100 d-flex flex-column justify-content-between card-background">
-                <img className="card-img-top" src={imgLearnSign} alt="Learn Sign Clipart" />
-                <hr className="m-0"></hr>
-                <div className="card-body">
-                  <h5 className="card-title">Learn Sign</h5>
-                  <p className="card-text">
-                    Curious about Indian Sign Language? Then, learn ISL from us!
-                    Select a sign from the list, watch it as many times as you
-                    want and learn ISL. Learning something is always a good
-                    thing, you know!
-                  </p>
-                </div>
-                <div className="card-footer p-0 m-0" style={{ border: "none" }}>
-                  <Link
-                    to="/sanvaad/learn-sign"
-                    className="btn btn-info w-100 p-3"
-                    style={{ fontSize: "large" }}
-                  >
-                    EXPLORE NOW!
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 mt-5">
-              <div className="card col-lg-12 h-100 d-flex flex-column justify-content-between card-background">
-                <img className="card-img-top" src={imgVideos} alt="Videos Clipart" />
-                <div className="card-body">
-                  <h5 className="card-title">Real-time recognition</h5>
-                  <p className="card-text">
-                    This technology uses advanced machine learning algorithms to analyze the video and match the movements to a 
-                    database of Indian Sign Language vocabulary. The system then generates 
-                    the corresponding video output, which can be shared with the entire 
-                    community.
-                  </p>
-                </div>
-                <div className="card-footer p-0 m-0" style={{ border: "none" }}>
-                  <Link
-                    to="/sanvaad/all-videos"
-                    className="btn btn-info w-100 p-3"
-                    style={{ fontSize: "large" }}
-                  >
-                    EXPLORE NOW!
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="d-flex justify-content-between" style={{marginTop:"20px"}} >
+            {serviceData.map((data, index) => {
+              return <MyCard key={index} link={data.link} title={data.title} text={data.text} src={data.src} />
+            })}
         </div>
       </div>
     </section>
