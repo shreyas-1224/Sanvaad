@@ -161,14 +161,21 @@ function Convert() {
     SpeechRecognition.stopListening();
   }
 
+  const resetText = ()=>{
+    setText("");
+  }
+
   return (
-    <div className='container-fluid'>
+    <div className='container-fluid' style={{marginTop:"15px"}}>
       <div className='row'>
-        <div className='col-md-3'>
+        <div className='col-md-3 scroll-container'>
           <label className='label-style'>
             Processed Text
           </label>
-          <textarea rows={2} value={text} className='w-100 input-style' />
+          <textarea rows={3} value={text} className='w-100 input-style' />
+          <button onClick={resetText} className='btn btn-primary w-100 h-20 btn-style btn-start'>
+            Reset text
+          </button>
           <label className='label-style'>
             Speech Recognition: {listening ? 'on' : 'off'}
           </label>
