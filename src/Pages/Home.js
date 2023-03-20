@@ -8,7 +8,7 @@ import Masthead from "../Components/Home/Masthead";
 function Home() {
   return (
     <div>
-
+      
       <Masthead />
 
       <Intro />

@@ -163,41 +163,36 @@ function Convert() {
 
   const resetText = ()=>{
     setText("");
+    textFromInput.current.value = '';
   }
 
   return (
     <div className='container-fluid' style={{marginTop:"15px"}}>
       <div className='row'>
-        <div className='col-md-3 scroll-container'>
-          <label className='label-style'>
-            Processed Text
-          </label>
-          <textarea rows={3} value={text} className='w-100 input-style' />
-          <button onClick={resetText} className='btn btn-primary w-100 h-20 btn-style btn-start'>
-            Reset text
-          </button>
+        <div className='col-md-3 '>
+          
           <label className='label-style'>
             Speech Recognition: {listening ? 'on' : 'off'}
           </label>
           <div className='space-between'>
-            <button style={{ width: '100px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: "rgb(100, 141, 181)", border: 'none', borderRadius: '5px' }} onClick={startListening}>
+            <button style={{ width: '95px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: "rgb(100, 141, 181)", border: 'none', borderRadius: '5px' }} onClick={startListening}>
               Mic On <i className="fa fa-microphone"/>
             </button>
-            <button style={{ width: '100px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: "rgb(100, 141, 181)", border: 'none', borderRadius: '5px' }} onClick={stopListening}>
+            <button style={{ width: '95px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: "rgb(100, 141, 181)", border: 'none', borderRadius: '5px' }} onClick={stopListening}>
               Mic Off <i className="fa fa-microphone-slash"/>
             </button>
-            <button style={{ width: '100px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: "rgb(100, 141, 181)", border: 'none', borderRadius: '5px' }} onClick={resetTranscript}>
+            <button style={{ width: '95px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: "rgb(100, 141, 181)", border: 'none', borderRadius: '5px' }} onClick={resetTranscript}>
               Clear
             </button>
           </div>
-          <textarea rows={2} ref={textFromAudio} value={transcript} placeholder='Speech input ...' className='w-100 input-style' />
+          <textarea rows={3} ref={textFromAudio} value={transcript} placeholder='Speech input ...' className='w-100 input-style' />
           <button onClick={() => {sign(textFromAudio)}} className='btn btn-primary w-100 btn-style btn-start'>
             Start Animations
           </button>
           <label className='label-style'>
             Text Input
           </label>
-          <textarea rows={2} ref={textFromInput} placeholder='Text input ...' className='w-100 input-style' />
+          <textarea rows={3} ref={textFromInput} placeholder='Text input ...' className='w-100 input-style' />
           <button onClick={() => {sign(textFromInput)}} className='btn btn-primary w-100 btn-style btn-start'>
             Start Animations
           </button>
@@ -206,11 +201,13 @@ function Convert() {
           <div id='canvas'/>
         </div>
         <div className='col-md-2'>
-          <p className='bot-label'>
-            Select Avatar
-          </p>
-          <img src={xbotPic} className='bot-image col-md-11' onClick={()=>{setBot(xbot)}} alt='Avatar 1: XBOT'/>
-          <img src={ybotPic} className='bot-image col-md-11' onClick={()=>{setBot(ybot)}} alt='Avatar 2: YBOT'/>
+        <label className='label-style'>
+            Processed Text
+          </label>
+          <textarea rows={4} value={text} className='w-100 input-style' />
+          <button onClick={resetText} className='btn btn-primary w-100 h-20 btn-style btn-start'>
+            Reset text
+          </button>
           <p className='label-style'>
             Animation Speed: {Math.round(speed*100)/100}
           </p>

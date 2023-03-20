@@ -3,17 +3,19 @@ import { Link } from "react-router-dom";
 import imgConvert from "../../Assets/convert.png";
 import imgLearnSign from "../../Assets/learn-sign.jpg";
 import imgVideos from "../../Assets/videos.png";
+import MyCard from "../serviceData/Mycard";
+
 
 function Services() {
   return (
-    <section id="services">
+    <section id="services"  style={{ marginTop:"-45px"}}>
       <div className="container">
         <div className="row mt-5">
           <div
             className="col-md-12 d-flex justify-content-center align-items-center"
             style={{ flexDirection: "column" }}
           >
-            <div className="h2 section-heading">Our Services</div>
+            <div className="h1 section-heading">Our Services</div>
             <div className="col-lg-4 divider my-2" />
             <div className="text-center normal-text">
               A comprehensive and aesthetic Indian Sign Language toolkit. A
@@ -81,8 +83,7 @@ function Services() {
                 <div className="card-body">
                   <h5 className="card-title">Real-time recognition</h5>
                   <p className="card-text">
-                    automatic recognition of the realtime gestures and movements of Indian Sign Language 
-                    . This technology uses advanced machine learning algorithms to analyze the video and match the movements to a 
+                    This technology uses advanced machine learning algorithms to analyze the video and match the movements to a 
                     database of Indian Sign Language vocabulary. The system then generates 
                     the corresponding video output, which can be shared with the entire 
                     community.

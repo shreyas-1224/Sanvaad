@@ -17,7 +17,7 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 function LearnSign() {
-  const [bot, setBot] = useState(ybot);
+  const [bot, setBot] = useState(xbot);
   const [speed, setSpeed] = useState(0.1);
   const [pause, setPause] = useState(800);
 
@@ -37,7 +37,7 @@ function LearnSign() {
 
     const spotLight = new THREE.SpotLight(0xffffff, 2);
     spotLight.position.set(0, 5, 5);
-    ref.scene.add(spotLight);
+    ref.scene.add(spotLight)
 
     ref.camera = new THREE.PerspectiveCamera(
         30,
@@ -165,11 +165,6 @@ function LearnSign() {
           <div id='canvas'/>
         </div>
         <div className='col-md-2'>
-          <p className='bot-label'>
-            Select Avatar
-          </p>
-          <img src={xbotPic} className='bot-image col-md-11' onClick={()=>{setBot(xbot)}} alt='Avatar 1: XBOT'/>
-          <img src={ybotPic} className='bot-image col-md-11' onClick={()=>{setBot(ybot)}} alt='Avatar 2: YBOT'/>
           <p className='label-style'>
             Animation Speed: {Math.round(speed*100)/100}
           </p>

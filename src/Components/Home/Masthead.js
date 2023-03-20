@@ -2,7 +2,7 @@ import React from "react";
 
 function Masthead() {
   return (
-    <div className="container-fluid d-flex justify-content-center align-items-center home-gradient" style={{height:"350px", marginTop:"30px"}}>
+    <div className="container-fluid d-flex justify-content-center align-items-center home-gradient" style={{height:"400px", marginTop:"15px"}}>
       <div
         className="row d-flex justify-content-center align-items-center"
         style={{ flexDirection: "column" }}
