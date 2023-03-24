@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import LearnSign from './Pages/LearnSign';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import RealTime from './Pages/RealTime';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route exact path='/sanvaad/home' element={<Home />} />
           <Route exact path='/sanvaad/convert' element={<Convert />} />
           <Route exact path='/sanvaad/learn-sign' element={<LearnSign />} />
+          <Route exact path='/sanvaad/realtime-recognition' element={<RealTime/>}/>
           <Route exact path='*' element={<Home/>} />
         </Routes>
         <Footer />

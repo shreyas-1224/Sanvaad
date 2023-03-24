@@ -18,7 +18,7 @@ function Navbar() {
                         <li className="nav-item"><Link to='/sanvaad/home' className="nav-link" style={{paddingLeft:"30px"}}>Home</Link></li>
                         <li className="nav-item"><Link to='/sanvaad/convert' className="nav-link" style={{paddingLeft:"30px"}}>Convert</Link></li>
                         <li className="nav-item"><Link to='/sanvaad/learn-sign' className="nav-link" style={{paddingLeft:"30px"}}>Learn Sign</Link></li>
-                        <li className="nav-item"><Link to='/sanvaad/home' className="nav-link" style={{paddingLeft:"30px"}}>real-time recognition</Link></li>
+                        <li className="nav-item"><Link to='/sanvaad/realtime-recognition' className="nav-link" style={{paddingLeft:"30px"}}>real-time recognition</Link></li>
                     </ul>
                 </div>
             </div>
